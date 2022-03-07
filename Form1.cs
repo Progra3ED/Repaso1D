@@ -74,11 +74,21 @@ namespace Repaso1D
 
         }
 
+        void CargarCombobox()
+        {
+            comboBox1.ValueMember = "NoEmpleado";
+            comboBox1.DisplayMember = "Nombre";
+
+            comboBox1.DataSource = empleados;
+            comboBox1.Refresh();
+        }
+
         private void buttonCargar_Click(object sender, EventArgs e)
         {
             CargarAsistencia();
             CargarEmpleado();
             CargarGrid();
+            CargarCombobox();
 
         }
 
@@ -104,6 +114,15 @@ namespace Repaso1D
             }
             dataGridView3.DataSource = sueldos;
             dataGridView3.Refresh();
+        }
+
+        private void buttonMostrar_Click(object sender, EventArgs e)
+        {
+            int noEmpleado = Convert.ToInt32(comboBox1.SelectedValue);
+
+            Sueldo sueldoMostrar = sueldos.Find(e => e.NoEmpleado == noEmpleado);
+
+            MessageBox.Show(sueldoMostrar.Nombre + " Sueldo del mes de " + sueldoMostrar.Mes + "Es de: " + sueldoMostrar.SueldoMes);
         }
     }
 }

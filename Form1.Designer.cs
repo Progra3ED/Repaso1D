@@ -33,6 +33,8 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.buttonCargar = new System.Windows.Forms.Button();
             this.buttonCalcular = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.buttonMostrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -85,11 +87,31 @@
             this.buttonCalcular.UseVisualStyleBackColor = true;
             this.buttonCalcular.Click += new System.EventHandler(this.buttonCalcular_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(400, 393);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(276, 23);
+            this.comboBox1.TabIndex = 5;
+            // 
+            // buttonMostrar
+            // 
+            this.buttonMostrar.Location = new System.Drawing.Point(400, 467);
+            this.buttonMostrar.Name = "buttonMostrar";
+            this.buttonMostrar.Size = new System.Drawing.Size(125, 54);
+            this.buttonMostrar.TabIndex = 6;
+            this.buttonMostrar.Text = "Mostrar Sueldo";
+            this.buttonMostrar.UseVisualStyleBackColor = true;
+            this.buttonMostrar.Click += new System.EventHandler(this.buttonMostrar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1271, 568);
+            this.ClientSize = new System.Drawing.Size(1271, 677);
+            this.Controls.Add(this.buttonMostrar);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.buttonCalcular);
             this.Controls.Add(this.buttonCargar);
             this.Controls.Add(this.dataGridView3);
@@ -111,5 +133,7 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Button buttonCargar;
         private System.Windows.Forms.Button buttonCalcular;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button buttonMostrar;
     }
 }
